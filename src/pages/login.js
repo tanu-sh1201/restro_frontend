@@ -11,41 +11,7 @@ export const Login = (props) => {
         navigate("view");
     }
 
-    const Login=(()=>{
-        var email = document.getElementById('email');
-    var password = document.getElementById('password');
-    var lowerCaseLetters = /[a-z]/g;
-    var upperCaseLetters = /[A-Z]/g;
-    var numbers = /[0-9]/g;
-
-    if(email.value.length == 0){
-        alert('Please fill in email');
-
-    }else if(password.value.length == 0){
-        alert('Please fill in password');
-
-    }else if(email.value.length == 0 && password.value.length == 0){
-        alert('Please fill in email and password');
-
-    }else if(password.value.length > 8){
-        alert('Max of 8');
-
-    }else if(!password.value.match(numbers)){
-        alert('please add 1 number');
-
-    }else if(!password.value.match(upperCaseLetters)){
-        alert('please add 1 uppercase letter');
-
-    }else if(!password.value.match(lowerCaseLetters)){
-        alert('please add 1 lovercase letter');
-
-    }else{
-        localStorage.setItem('email',email.value);
-        localStorage.setItem('pw', password.value);
-        alert('Your account has been created');
-    }
-
-    })
+    
     
 
     return (

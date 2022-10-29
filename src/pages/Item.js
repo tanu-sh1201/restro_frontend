@@ -1,6 +1,6 @@
 import {useEffect, useState, useContext} from 'react';
 // import Nav from './components/navBar;
-import {Cartcontext} from "../context/cart.context";
+
 import {useQuery, useMutation} from 'react-query'
 import { API_URL } from '../lib/config';
 

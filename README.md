@@ -3,7 +3,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Application URL
-https://restro-react-frontend.vercel.app/
+https://restaurant-frontend-7besahlwm-tanu-gkmitco.vercel.app/
 ## Available Scripts
 
 In the project directory, you can run:

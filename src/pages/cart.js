@@ -41,9 +41,7 @@ export default function Cart() {
         .then(async (data) =>await refetchFoodItems())
         .catch((err)=>console.log(err))
     }
-    const checkout =()=>{
-        navigate("checout")
-    }
+    
     return(
         cartItemsLoading ? <div>Loading...</div> : <div><div className="food-container">
 			{
@@ -81,7 +79,7 @@ export default function Cart() {
                     <p>Total :{cartItems.CartTotal}</p>
                 </div>
                 <div>
-                    <button type="submit" onClick={checkout}>CHECKOUT</button>
+                    <button type="submit" >CHECKOUT</button>
                 </div>
 		</div>
         

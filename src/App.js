@@ -25,8 +25,8 @@ function App() {
 
        auth?<Route path="view" element={<Home/>}>
              <Route index element={<ItemContainer/>} />
+             <Route path="/cart" element={<Cart/>} />
           </Route>
-        <Route path="cart" element={<Cart/>} />
        
            : <Route path= "/" element={<Link/>}/>
         

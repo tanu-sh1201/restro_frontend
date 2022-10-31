@@ -2,11 +2,16 @@ import {useEffect, useState, useContext} from 'react';
 // import Nav from './components/navBar;
 
 import {useQuery, useMutation} from 'react-query'
+import { json } from 'react-router-dom';
 import { API_URL } from '../lib/config';
 
 export default function ItemContainer() {
-	const {cartlist, setCartlist} = useContext(Cartcontext);
-	const {data: foodItems, isLoading: foodItemsLoading, refetch: refetchFoodItems} = useQuery('Dishes', () => fetch(`${API_URL}/dish`)
+	
+	const {data: foodItems, isLoading: foodItemsLoading, refetch: refetchFoodItems} = useQuery('Dishes', () => fetch(`${API_URL}/dish`,{
+		headers:{
+			Authorization: localStorage.getItem("token")
+		}
+	})
 	.then((res) => res.json())
 	.then((data) => 
 	data.map(dish => {
@@ -26,11 +31,13 @@ export default function ItemContainer() {
 		fetch(`${API_URL}/addToCart`, {
 			method :"POST",
 			body: JSON.stringify({
-				userId: 1,
+				userId: localStorage.getItem("user"),
 				itemId: id,
 			}),
 			headers: {
-				"Content-type": "application/json"
+				"Content-type": "application/json",
+				"Authorization":localStorage.getItem('token')
+				
 			}
 		})
 		.then((res) => res.json())

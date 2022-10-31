@@ -1,1 +1,1 @@
-export const API_URL = process.env.API_URL || 'https://deploy-restro.herokuapp.com/api'
+export const API_URL = process.env.API_URL || "https://deploy-restro.herokuapp.com/api"

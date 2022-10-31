@@ -3,13 +3,14 @@ import {Outlet, Link} from "react-router-dom";
  const Nav = function(){
 
 	return(
+		
 		<>
+		
 		<header>
         		<nav>
           		<Link to="/" id="title">Khana  khajana</Link>
           		<div className="navlink-container">
           		<Link to="/cart" className="navlink"> 
-          		
           		Cart
           		</Link>
           		</div>

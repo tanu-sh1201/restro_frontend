@@ -6,6 +6,7 @@ import {Routes,Route} from 'react-router-dom';
 import ItemContainer from "./pages/Item"
 import React, { useState } from "react";
 import {QueryClient, QueryClientProvider} from 'react-query'
+import Checkout from "./pages/checkout"
 // import { Register } from "./pages/register"
 import Link from "./pages/link";
 import Home from "./pages/home";
@@ -14,18 +15,21 @@ import Cart from "./pages/cart";
 function App() {
 
   const queryClient = new QueryClient()
-
+  const auth=localStorage.getItem("user")
+		console.log(auth);
   
   return (
     <QueryClientProvider client={queryClient}>
     <div className="App">
     <Routes >
 
-        <Route path= "/" element={<Link/>}/>
-        <Route path="view" element={<Home/>}>
+       auth?<Route path="view" element={<Home/>}>
              <Route index element={<ItemContainer/>} />
           </Route>
         <Route path="cart" element={<Cart/>} />
+        <Route path ="checkout" element ={<Checkout/>}/>
+           : <Route path= "/" element={<Link/>}/>
+        
     </Routes>
     
       

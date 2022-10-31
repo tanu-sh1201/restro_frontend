@@ -6,7 +6,7 @@ import {Routes,Route} from 'react-router-dom';
 import ItemContainer from "./pages/Item"
 import React, { useState } from "react";
 import {QueryClient, QueryClientProvider} from 'react-query'
-import Checkout from "./pages/checkout"
+
 // import { Register } from "./pages/register"
 import Link from "./pages/link";
 import Home from "./pages/home";

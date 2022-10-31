@@ -13,7 +13,7 @@ const Link = (props) => {
 	return(
 		<div>
 		{   
-	        currentForm === "login" ? <Login onFormSwitch={toggleForm}  setlogin={setlogin}/>  : <Register onFormSwitch={toggleForm} />
+	        currentForm === "login" ? <Login onFormSwitch={toggleForm} setAuth={props.setAuth}  setlogin={setlogin}/>  : <Register onFormSwitch={toggleForm} />
       	}
       </div>
       )

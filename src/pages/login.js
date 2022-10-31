@@ -22,9 +22,8 @@ export const Login = (props) => {
             result= await result.json();
             localStorage.setItem('user',result.user.id)
             localStorage.setItem('token',result.token)
-            navigate("view")
-        }else{
-            navigate("view")
+            props.setAuth(localStorage.getItem("user"));
+            // navigate("/")
         }
     }
 
